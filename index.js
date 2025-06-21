@@ -11,7 +11,10 @@ dotenv.config();
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
+  baseURL: process.env.OPENAI_API_BASE_URL || 'https://api.openai.com/v1',
 });
+
+const MODEL_NAME = process.env.OPENAI_MODEL || 'gpt-4.1-mini';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -61,7 +64,7 @@ async function executeCommand(command) {
 async function askLLM(input, context = '') {
   try {
     const response = await openai.chat.completions.create({
-      model: 'gpt-4.1-mini',
+      model: MODEL_NAME,
       messages: [
         {
           role: 'system',
@@ -90,7 +93,7 @@ async function askLLM(input, context = '') {
 async function classifyInput(input) {
   try {
     const response = await openai.chat.completions.create({
-      model: 'gpt-4.1-mini',
+      model: MODEL_NAME,
       messages: [
         {
           role: 'system',
