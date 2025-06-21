@@ -1,4 +1,4 @@
-# AI Shell 🚀
+# AIsh 🚀
 
 An intelligent shell wrapper that enhances your command-line experience using AI. It seamlessly handles both shell commands and natural language queries, providing helpful suggestions and corrections when needed.
 
@@ -16,8 +16,8 @@ An intelligent shell wrapper that enhances your command-line experience using AI
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ai-shell.git
-cd ai-shell
+git clone https://github.com/yourusername/aish.git
+cd aish
 ```
 
 2. Install dependencies:
@@ -38,7 +38,7 @@ OPENAI_MODEL=gpt-4.1-mini                      # Optional: model name
 
 ## Usage
 
-Run the AI shell:
+Run AIsh:
 ```bash
 node index.js
 ```
@@ -67,7 +67,7 @@ ai-shell> git stats
 ### Keyboard Shortcuts
 
 - `Ctrl+C`: Exit running command (or exit shell if no command is running)
-- `exit` or `quit`: Exit the AI shell
+- `exit` or `quit`: Exit AIsh
 
 ## Requirements
 
